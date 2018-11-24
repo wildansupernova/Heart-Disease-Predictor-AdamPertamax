@@ -36,56 +36,81 @@
     <div class="container">
         <form>
             <div class="form-group">
-                <label for="exampleInputEmail1">Umur</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Umur">
+                <label for="umur">Umur</label>
+                <input id="umur" class="form-control" type="number" step="1" min="0" max="200" placeholder="Umur">
             </div>
             <div class="form-group">
-                <label for="exampleInputPassword1">Jenis Kelamin</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Jenis Kelamin">
+                <label for="sex">Jenis Kelamin</label>
+                <select id="sex" name="sex" class="form-control" type="select">
+                    <option value="1">Male</option>
+                    <option value="0">Female</option>
+                </select>
             </div>
             <div class="form-group">
-                <label for="exampleInputEmail1">Tipe Sakit Dada</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Tipe Sakit Dada">
+                <label for="paintype">Tipe Sakit Dada</label>
+                <select id="paintype" name="paintype" class="form-control" type="select">
+                    <option value="1">Typical angina</option>
+                    <option value="2">Atypical angina</option>
+                    <option value="3">Non-anginal pain</option>
+                    <option value="4">Asymtotic</option>
+                </select>
             </div>
             <div class="form-group">
-                <label for="exampleInputEmail1">Tekanan Darah</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Tekanan Darah">
+                <label for="pressure">Tekanan Darah</label>
+                <input id="pressure" class="form-control" type="number" min="0" max="200" placeholder="Tekanan Darah">
             </div>
             <div class="form-group">
-                <label for="exampleInputPassword1">Serum Kolesterol</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Serum Kolesterol">
+                <label for="cholesterol_serum">Serum Kolesterol</label>
+                <input id="cholesterol_serum" class="form-control" type="number" min="0" max="200" placeholder="Serum Kolesterol">
             </div>
             <div class="form-group">
-                <label for="exampleInputEmail1">Gula Darah Puasa</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Gula Darah Puasa">
+                <label for="sugar">Gula Darah Puasa > 120 mg/dl</label>
+                <select id="sugar" name="sugar" class="form-control" type="select">
+                    <option value="1">Benar</option>
+                    <option value="0">Salah</option>
+                </select>
             </div>
             <div class="form-group">
-                <label for="exampleInputEmail1">ECG</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="ECG">
+                <label for="ECG">ECG Istirahat</label>
+                <select id="ECG" name="ECG" class="form-control" type="select">
+                    <option value="0">Normal</option>
+                    <option value="1">Memiliki anomali gelombang ST-T</option>
+                    <option value="2">Left Ventricular Hyperthrophy</option>
+                </select>
             </div>
             <div class="form-group">
-                <label for="exampleInputPassword1">Detak Jantung Maksimal</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Detak Jantung Maksimal">
+                <label for="max_heart_rate">Detak Jantung Maksimal</label>
+                <input id="max_heart_rate" class="form-control" type="number" min="0" max="200" placeholder="Heart Rate">
             </div>
             <div class="form-group">
-                <label for="exampleInputEmail1">Angina</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Angina">
+                <label for="angina">Angina Olahraga</label>
+                <select id="angina" name="angina" class="form-control" type="select">
+                    <option value="1">Ya</option>
+                    <option value="0">Tidak</option>
+                </select>
             </div>
             <div class="form-group">
-                <label for="exampleInputEmail1">ST Depression</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="ST Depression">
+                <label for="ST_depression">ST Depression</label>
+                <input id="ST_depression" class="form-control" type="number" min="0" max="200" placeholder="ST Depression">
             </div>
             <div class="form-group">
-                <label for="exampleInputPassword1">Peak Exercise ST</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Peak Exercise ST">
+                <label for="Peak_ST">Peak Exercise ST</label>
+                <select id="Peak_ST" name="Peak_ST" class="form-control" type="select">
+                    <option value="1">Upsloping</option>
+                    <option value="0">Flat</option>
+                </select>
             </div>
             <div class="form-group">
-                <label for="exampleInputEmail1">Jumlah Major Vessels</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="JUmlah Major Vessels">
+                <label for="vessels">Jumlah Major Vessels</label>
+                <input id="vessels" class="form-control" type="number" min="0" max="3">
             </div>
             <div class="form-group">
                 <label for="exampleInputEmail1">Thal</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Thal">
+                <select id="Thal" name="Thal" class="form-control" type="select">
+                    <option value="3">Normal</option>
+                    <option value="6">Fixed Defect</option>
+                    <option value="3">Reversable Defect</option>
+                </select>
             </div>
             <button type="submit" class="btn btn-default">Submit</button>
         </form>
