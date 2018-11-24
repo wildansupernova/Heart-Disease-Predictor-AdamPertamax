@@ -6,14 +6,18 @@ app = fl.Flask(__name__)
 
 with open('modelbagus.sav', 'rb') as filemodel:
 	predictor = pickle.load(filemodel)
+with open('filler.sav', 'rb') as fillfile:
+	filler = pickle.load(fillfile)
+
 
 def preprocessdata(data):
 	arr = []
 	for key in data:
-		if data[key] =="":
-			arr.append(float("NaN"))
-		else:
-			arr.append(float(data[key]))
+		if len(arr)<10:
+			if data[key] =="":
+				arr.append(filler[key])
+			else:
+				arr.append(float(data[key]))
 	return arr
 
 def prediction_info(pred):
@@ -27,11 +31,22 @@ def prediction_info(pred):
 def main_menu():
 	return fl.render_template('index.html')
 
+# @app.route('/result')
+# def result():
+# 	return fl.render_template('result.html')
+
+@app.route('/about')
+def about():
+	return fl.render_template('about.html')
+
 @app.route('/prediction', methods=['POST'])
 def show_result():
-	data = fl.request.form	
+	data = fl.request.form
 	prediction = predictor.predict([preprocessdata(data)])
-	return str(prediction_info(prediction[0]))
+	result = {
+		"stringResult": str(prediction_info(prediction[0]))
+	}
+	return fl.render_template('result.html', result = result)
 
 @app.route('/test')
 def show_test():

@@ -10,7 +10,7 @@
     <title>Heart Disease</title>
 </head>
 <body>
-    <nav class="navbar navbar-default navbar-fixed-top">
+    <nav class="navbar navbar-default ">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -27,8 +27,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Help</a></li>
+                <li><a href="about">About</a></li>
             </ul>
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
@@ -37,7 +36,7 @@
         <form action="/prediction" method='POST'>
             <div class="form-group">
                 <label for="umur">Umur</label>
-                <input id="umur" class="form-control" type="number" step="1" min="0" max="200" placeholder="Umur">
+                <input name="age" id="umur" class="form-control" type="number" step="1" min="0" max="200" placeholder="Umur">
             </div>
             <div class="form-group">
                 <label for="sex">Jenis Kelamin</label>
@@ -48,7 +47,7 @@
             </div>
             <div class="form-group">
                 <label for="paintype">Tipe Sakit Dada</label>
-                <select id="paintype" name="paintype" class="form-control" type="select">
+                <select id="paintype" name="chest-pain" class="form-control" type="select">
                     <option value="1">Typical angina</option>
                     <option value="2">Atypical angina</option>
                     <option value="3">Non-anginal pain</option>
@@ -57,15 +56,15 @@
             </div>
             <div class="form-group">
                 <label for="pressure">Tekanan Darah</label>
-                <input id="pressure" class="form-control" type="number" min="0" max="200" placeholder="Tekanan Darah">
+                <input name="rpb" id="pressure" class="form-control" type="number" min="0" max="200" placeholder="Tekanan Darah">
             </div>
             <div class="form-group">
                 <label for="cholesterol_serum">Serum Kolesterol</label>
-                <input id="cholesterol_serum" class="form-control" type="number" min="0" max="200" placeholder="Serum Kolesterol">
+                <input name="serchol" id="cholesterol_serum" class="form-control" type="number" min="0" max="300" placeholder="Serum Kolesterol">
             </div>
             <div class="form-group">
                 <label for="sugar">Gula Darah Puasa > 120 mg/dl</label>
-                <select id="sugar" name="sugar" class="form-control" type="select">
+                <select id="sugar" name="fbs" class="form-control" type="select">
                     <option value="1">Benar</option>
                     <option value="0">Salah</option>
                 </select>
@@ -80,7 +79,7 @@
             </div>
             <div class="form-group">
                 <label for="max_heart_rate">Detak Jantung Maksimal</label>
-                <input id="max_heart_rate" class="form-control" type="number" min="0" max="200" placeholder="Heart Rate">
+                <input name="mxhrate" id="max_heart_rate" class="form-control" type="number" min="0" max="200" placeholder="Heart Rate">
             </div>
             <div class="form-group">
                 <label for="angina">Angina Olahraga</label>
@@ -91,7 +90,7 @@
             </div>
             <div class="form-group">
                 <label for="ST_depression">ST Depression</label>
-                <input id="ST_depression" class="form-control" type="number" min="0" max="200" placeholder="ST Depression">
+                <input name="STdep" id="ST_depression" class="form-control" type="number" min="0" max="200" placeholder="ST Depression">
             </div>
             <div class="form-group">
                 <label for="Peak_ST">Peak Exercise ST</label>
@@ -102,7 +101,7 @@
             </div>
             <div class="form-group">
                 <label for="vessels">Jumlah Major Vessels</label>
-                <input id="vessels" class="form-control" type="number" min="0" max="3">
+                <input name="majorVessel" id="vessels" class="form-control" type="number" min="0" max="3">
             </div>
             <div class="form-group">
                 <label for="exampleInputEmail1">Thal</label>
