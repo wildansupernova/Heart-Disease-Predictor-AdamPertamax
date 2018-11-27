@@ -36,7 +36,7 @@
         <form action="/prediction" method='POST'>
             <div class="form-group">
                 <label for="umur">Umur</label>
-                <input name="age" id="umur" class="form-control" type="number" step="1" min="0" max="200" placeholder="Umur">
+                <input name="age" id="umur" class="form-control" type="number" step="1" placeholder="Umur">
             </div>
             <div class="form-group">
                 <label for="sex">Jenis Kelamin</label>
@@ -56,11 +56,11 @@
             </div>
             <div class="form-group">
                 <label for="pressure">Tekanan Darah</label>
-                <input name="rpb" id="pressure" class="form-control" type="number" min="0" max="200" placeholder="Tekanan Darah">
+                <input name="rpb" id="pressure" class="form-control" type="number" min="0" max="200" placeholder="Tekanan Darah (mmHg)">
             </div>
             <div class="form-group">
                 <label for="cholesterol_serum">Serum Kolesterol</label>
-                <input name="serchol" id="cholesterol_serum" class="form-control" type="number" min="0" max="300" placeholder="Serum Kolesterol">
+                <input name="serchol" id="cholesterol_serum" class="form-control" type="number" min="0" max="300" placeholder="Serum Kolesterol (mg/dl) ">
             </div>
             <div class="form-group">
                 <label for="sugar">Gula Darah Puasa > 120 mg/dl</label>
@@ -79,7 +79,7 @@
             </div>
             <div class="form-group">
                 <label for="max_heart_rate">Detak Jantung Maksimal</label>
-                <input name="mxhrate" id="max_heart_rate" class="form-control" type="number" min="0" max="200" placeholder="Heart Rate">
+                <input name="mxhrate" id="max_heart_rate" class="form-control" type="number" placeholder="Heart Rate">
             </div>
             <div class="form-group">
                 <label for="angina">Angina Olahraga</label>
@@ -90,13 +90,14 @@
             </div>
             <div class="form-group">
                 <label for="ST_depression">ST Depression</label>
-                <input name="STdep" id="ST_depression" class="form-control" type="number" min="0" max="200" placeholder="ST Depression">
+                <input name="STdep" id="ST_depression" class="form-control" type="number" placeholder="ST Depression">
             </div>
             <div class="form-group">
                 <label for="Peak_ST">Peak Exercise ST</label>
                 <select id="Peak_ST" name="Peak_ST" class="form-control" type="select">
                     <option value="1">Upsloping</option>
-                    <option value="0">Flat</option>
+                    <option value="2">Flat</option>
+                    <option value="3">Downsloping</option>
                 </select>
             </div>
             <div class="form-group">
@@ -108,7 +109,7 @@
                 <select id="Thal" name="Thal" class="form-control" type="select">
                     <option value="3">Normal</option>
                     <option value="6">Fixed Defect</option>
-                    <option value="3">Reversable Defect</option>
+                    <option value="7">Reversable Defect</option>
                 </select>
             </div>
             <button type="submit" class="btn btn-default">Submit</button>
